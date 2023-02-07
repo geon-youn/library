@@ -1,14 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./script.js" defer></script>
-    <link rel="stylesheet" href="./style.css">
-    <title>Library</title>
-</head>
-<body>
-    <h1>Woo</h1>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="./script.js" defer></script>
+        <link rel="stylesheet" href="./style.css" />
+        <title>Library</title>
+    </head>
+    <body>
+        <h1>Library</h1>
+        <button id="new_book">New Book</button>
+        <form id="book_form" style="display: none">
+            <div>
+                <label for="author">Author</label>
+                <input
+                    type="text"
+                    name="author"
+                    id="author"
+                    required
+                    placeholder="Author"
+                />
+            </div>
+            <div>
+                <label for="title">Title</label>
+                <input
+                    type="text"
+                    name="title"
+                    id="title"
+                    required
+                    placeholder="Title"
+                />
+            </div>
+            <div>
+                <label for="n_pages">Number of Pages</label>
+                <input
+                    type="number"
+                    name="n_pages"
+                    id="n_pages"
+                    min="0"
+                    placeholder="0"
+                    required
+                />
+            </div>
+            <div>
+                <label for="read">Read</label>
+                <input type="checkbox" name="read" id="read" />
+            </div>
+            <div>
+                <button type="submit" id="add_book">Add Book</button>
+            </div>
+        </form>
+        <div id="books"></div>
+    </body>
 </html>

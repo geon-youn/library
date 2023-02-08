@@ -2,11 +2,18 @@ let myLibrary = [];
 
 book_container = document.querySelector("#books");
 
-function Book(author, title, n_pages, read) {
-    this.author = author;
-    this.title = title;
-    this.n_pages = n_pages;
-    this.read = read;
+class Book {
+    author;
+    title;
+    n_pages;
+    read;
+    
+    constructor(author, title, n_pages, read) {
+        this.author = author;
+        this.title = title;
+        this.n_pages = n_pages;
+        this.read = read;
+    }
 }
 
 function addBookToLibrary(...args) {
